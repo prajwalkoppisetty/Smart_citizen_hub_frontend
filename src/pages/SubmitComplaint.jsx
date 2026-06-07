@@ -203,6 +203,7 @@ export default function SubmitComplaint() {
         }
       } catch (err) {
         console.error("Auto AI analysis failed:", err);
+        addToast(`AI Analysis Failed: ${err.message || err}`, 'error');
       } finally {
         setIsAnalyzing(false);
       }
